@@ -1,1 +1,8 @@
 <h1> Hello World </h1>
+
+{% if articles %}
+    {% for article in articles %}
+    <li> <a href="{% url 'article' article.slug %}"> {{ article.title }} </a> </li>
+    {% endfor %}
+
+{% endif %}

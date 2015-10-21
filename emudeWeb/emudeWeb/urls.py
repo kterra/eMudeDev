@@ -21,4 +21,5 @@ from news import urls as news_urls
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^news/', include(news_urls)),
+    url('^markdown/', include( 'django_markdown.urls')),
 ]
