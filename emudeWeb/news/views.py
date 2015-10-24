@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 from news.models import Article
 # Create your views here.
@@ -14,6 +15,6 @@ def article(request, article_title_slug):
         article = Article.objects.get(slug = article_title_slug)
         context_dict['article'] = article
     except Article.DoesNotExist:
-        print("This article does not exist!")
+        raise Http404("Article does not exist")
 
     return render(request, 'article.html', context_dict)

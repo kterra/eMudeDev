@@ -1,0 +1,72 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block navigation%}
+<body id="login-body"  >
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <a class="navbar-brand" href="index.html"><img class="logo" src= {% static "core/img/logo_emude.png" %}></a>
+          </div>
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-lock"></i>Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label style="color: rgb(104, 138, 126);">
+                                        <input name="remember" type="checkbox" value="Remember Me">Lembrar-me
+                                    </label>
+                                    <span class="pull-right"> <a href="#" style="color: rgb(104, 138, 126);"> Esqueceu a senha?</a>
+                                    </span>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="index.html" class="btn btn-lg btn-success btn-block" >Entrar</a>
+                                <a href="index.html"  class="btn btn-lg btn-success btn-block" style="background-color: #f6c001;
+                                border-color: #f6c001; ">Fazer cadastro</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %} {% endblock %}
+
+{% block javascript %}
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+{% endblock %}
